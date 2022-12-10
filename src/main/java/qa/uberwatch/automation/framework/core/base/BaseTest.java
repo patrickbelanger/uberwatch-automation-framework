@@ -12,21 +12,20 @@ abstract class BaseTest extends FrameworkCore {
     @BeforeSuite
     public void frameworkSetUp() {
         new FrameworkBanner().show();
-        log.info("Automation framework initialization + copyright notice");
     }
 
     @BeforeTest
     public void testSetUp() {
-        log.info("Setting up test execution");
+
     }
 
     @AfterTest
     public void testTearDown() {
-        log.info("Tear down test execution");
+
     }
 
     @AfterSuite
-    void frameworkTearDown() {
+    public void frameworkTearDown() {
         log.info("Tear down Automation framework");
     }
 }
