@@ -13,24 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package qa.uberwatch.automation.framework.core.configuration;
+package qa.uberwatch.automation.framework.core.context;
 
-import org.aeonbits.owner.Config;
-import org.aeonbits.owner.Config.Sources;
-
-@Sources({ "classpath:framework.configuration.properties" })
-public interface FrameworkConfiguration extends Config {
-
-    @Key("application.version")
-    String applicationVersion();
-    @Key("application.build.name")
-    String applicationBuildName();
-    @Key("application.build.type")
-    String applicationBuildType();
-    @Key("webdriver.default")
-    @DefaultValue("CHROME")
-    String webdriverDefault();
-
-    @Key("webdriver.default.path")
-    String webdriverDefaultPath();
+public class TestNgParameters {
+    public final static String USE_GRID = "useGrid";
+    public final static String WEBDRIVER = "webDriver";
 }

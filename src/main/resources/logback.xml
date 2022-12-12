@@ -17,6 +17,8 @@
     </appender>
 
     <logger name="ch.qos.logback.*" level="OFF" />
+    <logger name="io.netty.*" level="OFF" />
+    <logger name="org.asynchttpclient.*" level="OFF" />
     <logger name="org.testng.internal.Graph" level="OFF" />
     <logger name="org.testng.internal.Utils" level="OFF" />
     <logger name="org.testng.TestNG" level="OFF" />
@@ -26,6 +28,10 @@
     </root>
 
     <root level="debug">
+        <appender-ref ref="FILE" />
+    </root>
+
+    <root level="info">
         <appender-ref ref="FILE" />
         <appender-ref ref="STDOUT" />
     </root>

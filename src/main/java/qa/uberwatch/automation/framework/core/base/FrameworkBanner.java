@@ -22,8 +22,7 @@ import qa.uberwatch.automation.framework.core.configuration.FrameworkConfigurati
 import java.io.PrintStream;
 
 public class FrameworkBanner {
-   static FrameworkConfiguration frameworkConfiguration = ConfigFactory.create(FrameworkConfiguration.class);
-
+   private static final FrameworkConfiguration frameworkConfiguration = ConfigFactory.create(FrameworkConfiguration.class);
    private static final String[] BANNER = {
            "",
            "          $$\\                                                    $$\\               $$\\       ",
@@ -50,11 +49,10 @@ public class FrameworkBanner {
            ""
    };
 
-   public void show() {
+   public static void show() {
       PrintStream printStream = new PrintStream(System.out);
       for (String line : BANNER) {
          printStream.println(line);
       }
    }
-
 }
